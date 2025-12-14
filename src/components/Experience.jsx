@@ -19,7 +19,7 @@ const Experience = () => {
 
         {/* Label Badge */}
         <div className="absolute -top-4 left-6 md:left-10 px-6 py-2 bg-secondary-purple text-sm font-bold text-white rounded-full uppercase tracking-wider shadow-xl border border-white/20">
-          Latest Experience
+          Experience
         </div>
 
         <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 pt-6">
