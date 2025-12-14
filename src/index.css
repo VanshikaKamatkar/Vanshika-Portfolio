@@ -1,1 +1,52 @@
+/* 1. Import Fonts FIRST (Must be at the very top) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* 2. Import Tailwind */
 @import "tailwindcss";
+
+/* 3. Define Custom Theme Variables */
+@theme {
+  /* Color Palette */
+  --color-primary-dark: #231942;
+  --color-secondary-purple: #5e548e;
+  --color-accent-purple: #9f86c0;
+  --color-light-purple: #be95c4;
+  --color-soft-pink: #e0b1cb;
+
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* 4. Global Styles */
+@layer base {
+  body {
+    @apply bg-primary-dark text-white font-sans antialiased;
+    scroll-behavior: smooth; 
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-primary-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-purple rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-purple;
+  }
+}
