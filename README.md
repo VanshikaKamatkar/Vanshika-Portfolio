@@ -2,7 +2,7 @@
 
 A modern, high-performance personal portfolio website built to showcase my full-stack development skills, projects, and experience. Designed with a **dark-themed, glassmorphic aesthetic** using **Tailwind CSS v4** and **Framer Motion**.
 
-🔗 **Live Demo:** [[Insert Your Vercel Link Here](https://vanshika-portfolio-sand.vercel.app/)]
+🔗 **Live Demo:** [[Vanshika-Portfolio](https://vanshika-portfolio-sand.vercel.app/)]
 
 ## ✨ Key Features
 
