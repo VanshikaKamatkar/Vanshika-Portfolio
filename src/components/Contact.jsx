@@ -19,8 +19,6 @@ const Contact = () => {
 
   const [status, setStatus] = useState('idle'); 
 
-  // Access environment variables
-  // NOTE: If using Create React App, use process.env.REACT_APP_WEB3_ACCESS_KEY
   const apiKey = import.meta.env.VITE_WEB3_ACCESS_KEY;
   const apiUrl = import.meta.env.VITE_WEB3_API_URL;
 

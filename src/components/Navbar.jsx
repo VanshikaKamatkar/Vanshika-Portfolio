@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -32,10 +32,6 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[85%] lg:w-[65%] max-w-5xl transition-all duration-300`}>
       
-      {/* UPDATED BACKGROUNDS:
-         - 'backdrop-blur-md': Keeps the glassy blur effect.
-         - Scrolled ? 'bg-primary-dark/30' : 'bg-transparent'
-      */}
       <div className={`
         flex items-center justify-between px-6 py-3 md:py-4 rounded-full 
         backdrop-blur-md transition-colors duration-300
@@ -60,7 +56,6 @@ const Navbar = () => {
                 {item.text}
               </span>
               
-              {/* Glowing Underline */}
               <span className={`absolute -bottom-2 left-0 h-[2px] bg-soft-pink shadow-[0_0_8px_rgba(224,177,203,0.8)] transition-all duration-300 ease-out
                 ${activeLink === item.id ? 'w-full' : 'w-0 group-hover:w-full'}
               `}></span>
@@ -73,24 +68,27 @@ const Navbar = () => {
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            <button className="flex items-center gap-1 text-sm md:text-base font-medium text-gray-300 hover:text-white transition-colors">
+            <button className="flex items-center gap-1 text-sm md:text-base font-medium text-gray-300 hover:text-white transition-colors py-2">
               Connect With Me <FiChevronDown />
             </button>
 
             {/* Dropdown Menu */}
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-4 w-48 bg-primary-dark/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden flex flex-col p-2 animate-fade-in border border-white/5">
-                {socialLinks.map((social) => (
-                  <a 
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-3 px-4 py-2 text-gray-300 hover:bg-white/10 rounded-lg transition-colors"
-                  >
-                    {social.icon} {social.name}
-                  </a>
-                ))}
+              // FIX 1: The 'pt-4' here acts as an invisible bridge so the mouse doesn't "leave" the area
+              <div className="absolute top-full left-0 pt-4 w-48">
+                <div className="bg-primary-dark/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden flex flex-col p-2 animate-fade-in border border-white/5">
+                  {socialLinks.map((social) => (
+                    <a 
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-3 px-4 py-2 text-gray-300 hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                      {social.icon} {social.name}
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -100,7 +98,7 @@ const Navbar = () => {
         {/* Right Side: Resume Button */}
         <div>
           <a
-            href="/Vanshika Kamatkar Resume (24).pdf"             
+            href="/resume.pdf"  // FIX 2: Renamed to simple filename
             download="Vanshika_Resume.pdf" 
             target="_blank"
             rel="noopener noreferrer"
