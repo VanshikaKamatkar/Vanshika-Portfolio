@@ -1,9 +1,8 @@
 # ⚡ Vanshika Kamatkar | Full Stack Developer Portfolio
 
-![Project Banner](public/project-screenshot.png)
 A modern, high-performance personal portfolio website built to showcase my full-stack development skills, projects, and experience. Designed with a **dark-themed, glassmorphic aesthetic** using **Tailwind CSS v4** and **Framer Motion**.
 
-🔗 **Live Demo:** [Insert Your Vercel Link Here]
+🔗 **Live Demo:** [[Insert Your Vercel Link Here](https://vanshika-portfolio-sand.vercel.app/)]
 
 ## ✨ Key Features
 
@@ -37,7 +36,7 @@ Follow these steps to run the project locally on your machine.
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/VanshikaKamatkar/my-portfolio.git](https://github.com/VanshikaKamatkar/my-portfolio.git)
+    git clone [https://github.com/VanshikaKamatkar/Vanshika-Portfolio.git](https://github.com/VanshikaKamatkar/my-portfolio.git)
     cd my-portfolio
     ```
 
